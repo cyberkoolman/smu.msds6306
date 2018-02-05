@@ -7,7 +7,7 @@ This is the repository for SMU MSDS homework and will host series of homeworks f
 
 ## Contents
 
-\unit04 : Homework files for unit04
+unit04 : Homework files for unit04
 
 
 ## Reference
