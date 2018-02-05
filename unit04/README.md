@@ -2,7 +2,7 @@
 
 Author: Randy Park
 
-Assignment for Unit 04
+Assignment for Unit 04.  Would like to express special thanks to <a href="https://github.com/rudeboybert/fivethirtyeight">fivethirtyeight</a> project
 
 
 
@@ -10,3 +10,4 @@ Assignment for Unit 04
 
 unit04-randy.park.Rmd
 unit04-randy.park.html
+
