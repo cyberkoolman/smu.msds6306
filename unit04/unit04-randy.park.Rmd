@@ -1,0 +1,48 @@
+---
+title: "MSDS 6306 Unit 4"
+author: "Randy Park"
+date: "Feb 05, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Question 1: FiveThirtyEight Data
+```{r Question 1: FiveThirtyEight Data, echo=TRUE}
+# a) install fivethirtyeight package
+install.packages("fivethirtyeight")
+
+# b) listing of Data sets in package 'fivethirtyeight'
+library(fivethirtyeight)
+data(package = "fivethirtyeight")
+
+# b) assign the eighteenth data set to an object 'df'
+df <- college_recent_grads
+
+# c) Use a more detailed list of the data sets to write out the URL
+# ```
+vignette("fivethirtyeight", package = "fivethirtyeight")
+
+# http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/
+
+
+# d) give the dimensions and column names of this data frame
+colnames(df) <- colnames(college_recent_grads)
+
+```
+
+
+```
+
+
+### Question 2: Data Summary
+```{r Question 2: Data Summary, echo=TRUE}
+
+```
+
+### Question 3: Codebook
+```{r Question 3: Codebook, echo=TRUE}
+
+```
