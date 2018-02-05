@@ -8,14 +8,11 @@ The respository will host series of homeworks for the class SMU MSDS
 
 ## Contents
 
-What these are
+\unit04 : Homework files for unit04
 
-## Quick Start
 
-### Building the Application Locally
+## Reference
 
-What needs to
+### sub-reference
 
-- Java JDK 8
-- NodeJS 4.x or higher (to install the `npm` package manager)
-- Bower (`npm install -g bower`)
+Fill this out section later
