@@ -1,0 +1,76 @@
+---
+title: "MSDS 6306 Unit 5"
+author: "Randy Park"
+date: "Feb 19, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Question 1: Data Munging
+```{r Question 1: Data_Munging, echo=TRUE}
+
+# a) import 2016 data and assign column names
+df <- data.frame(read.csv('yob2016.txt', sep=";", header=FALSE))
+colnames(df) <- c('first_name', 'gender', 'amount')
+
+
+# b) Display the summary
+summary(df)
+
+
+# c) find missplled ending 'yyy'
+grep("yyy$", df$first_name, value=TRUE)
+
+
+# d) remove the misspelled and set clean data to y2016
+y2016 <- df[-which(df$first_name == grep("yyy$", df$first_name, value=TRUE)), ]
+
+```
+
+
+### Question 2: Data Merging
+```{r Question 2: Data_Merging, echo=TRUE}
+# a) import 2015 data and assign column names
+y2015 <- data.frame(read.csv('yob2015.txt', sep=",", header=FALSE))
+colnames(y2015) <- c('first_name', 'gender', 'amount')
+
+# b) examining last 10 rows
+tail(y2015, 10)
+# above 10 rows give indication that data seems to be sorted by first_name and genger
+
+# c) merge y2016 and y2015 and not to include NA
+final <- merge(y2016, y2015, by="first_name")
+
+library(knitr)
+kable(sapply(data.frame(sapply(final$amount.x, is.na)),sum), col.names="Number of NA's")
+kable(sapply(data.frame(sapply(final$amount.y, is.na)),sum), col.names="Number of NA's")
+```
+
+### Question 3: Data Summary
+```{r Question 3: Data_Summary, echo=TRUE}
+# a) Find Total
+final$Total <- final$amount.x + final$amount.y
+sum(final$Total)
+
+# b) Sort by Total and display 10 most popular names
+head(final[order(final$Total, decreasing = TRUE),], 10)
+
+# c) Top 10 Girl's name only
+female_only <- final[which(final$gender.x=="F"), ]
+top_ten_female_name <- head(female_only[order(female_only$Total, decreasing = TRUE),], 10)
+top_ten_female_name
+
+# d) 
+write.csv(top_ten_female_name[,c('first_name', 'Total')], "popular_girls_name.csv", row.names=FALSE)
+
+```
+
+### Question 4: Upload to GitHub
+
+please refer https://github.com/cyberkoolman/smu.msds6306
+unit05 subdirectory contains this markup and html file
+
+```

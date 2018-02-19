@@ -34,15 +34,21 @@ colnames(df) <- colnames(college_recent_grads)
 ```
 
 
-```
+
 
 
 ### Question 2: Data Summary
 ```{r Question 2: Data Summary, echo=TRUE}
 
+# Not able to do this portion.  Looking for grader's assistance on what I should've done.
 ```
+
 
 ### Question 3: Codebook
-```{r Question 3: Codebook, echo=TRUE}
 
-```
+please refer https://github.com/cyberkoolman/smu.msds6306
+
+
+unit 04 subdirectory contains this markup file and html file
+
+
